@@ -52,11 +52,11 @@ class Song
   def self.new_from_filename(filename) #"Taylor Swift - Blank Space.mp3"
     nameparts = filename.split(" - ")
     artist = nameparts[0]
-    title = nameparts[1].slice! ".mp3"
+    nameparts[1].slice! ".mp3"
     song=self.new
-    song.name = title
+    song.name = nameparts[1]
     song.artist_name = artist
-    song    
+    song
   end
 
 end
