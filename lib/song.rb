@@ -33,5 +33,11 @@ class Song
     return song
   end
 
+  def self.find_by_name(name)
+    self.all.detect{|song| song.name==name}
+    
+  end
+
+
 
 end
