@@ -63,7 +63,10 @@ class Song
     newsong =  self.new_from_filename(filename)
     self.all << newsong
     newsong
+  end
 
+  def self.destroy_all
+    self.all.clear
   end
 
 end
