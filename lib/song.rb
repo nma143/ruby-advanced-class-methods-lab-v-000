@@ -15,7 +15,7 @@ class Song
     song.name = nil
     song.artist_name = nil
     self.all << song
-    
+    return song
   end
 
 end
