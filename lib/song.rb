@@ -21,7 +21,7 @@ class Song
   def self.new_by_name(name, artist_name = nil)
     song = self.new
     song.name = name
-    song.artist_name = nil
+    #song.artist_name = nil
     return song
   end
 
