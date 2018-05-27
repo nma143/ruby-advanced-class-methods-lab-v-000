@@ -18,10 +18,10 @@ class Song
     return song
   end
 
-  def self.new_by_name(name, artist_name = nil)
+  def self.new_by_name(name)
     song = self.new
     song.name = name
-    #song.artist_name = nil
+    song.artist_name = nil
     return song
   end
 
