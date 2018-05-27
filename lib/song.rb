@@ -49,4 +49,11 @@ class Song
     self.all.sort_by{|song| song.name}
   end
 
+  def self.new_from_filename(filename) #"Taylor Swift - Blank Space.mp3"
+    nameparts = filename.split(" - ")
+    artist = nameparts[0]
+    title = nameparts[1].slice! ".mp3"
+    #self.new_by_name(title, artist)
+  end
+
 end
