@@ -18,7 +18,7 @@ class Song
     return song
   end
 
-  def self.new_by_name(name)
+  def self.new_by_name(name, artist_name = nil)
     song = self.new
     song.name = name
     song.artist_name = nil
@@ -49,11 +49,14 @@ class Song
     self.all.sort_by{|song| song.name}
   end
 
-  def self.new_from_filename
-    
+  def self.new_from_filename(filename) #"Taylor Swift - Blank Space.mp3"
+    nameparts = filename.split(" - ")
+    artist = nameparts[0]
+    title = nameparts[1].slice! ".mp3"
+    self.new_by_name(title, artist)
   end
 
-  def self.create_from_filename
+  def self.create_from_filename(filename)
 
   end
 
