@@ -53,7 +53,10 @@ class Song
     nameparts = filename.split(" - ")
     artist = nameparts[0]
     title = nameparts[1].slice! ".mp3"
-    #self.new_by_name(title, artist)
+    song=self.new
+    song.name = title
+    song.artist_name = artist
+    song    
   end
 
 end
