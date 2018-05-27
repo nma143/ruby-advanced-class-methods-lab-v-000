@@ -60,6 +60,9 @@ class Song
   end
 
   def self.create_from_filename(filename)
+    newsong =  self.new_from_filename(filename)
+    self.all << newsong
+    newsong
 
   end
 
